@@ -6,16 +6,18 @@ public class rotationEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float rotationSpeed;
-    public float smoothSpeed;
+    private Vector3 target = new Vector3(19.3f, 1.13f, 0.0f);
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate((Vector3.up * rotationSpeed) * (Time.deltaTime * smoothSpeed), Space.Self);
+
+      transform.RotateAround(target, Vector3.up, 15 * Time.deltaTime);
     }
+
 }

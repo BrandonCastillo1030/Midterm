@@ -9,10 +9,10 @@ public class enemySpawn : MonoBehaviour
     public GameObject enemy;
     void Start()
     {
-        
-        for (int i = -5; i < 50; i++)
+
+        for (int i = 0; i < 50; i++)
         {
-            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(-40,10) ,3, i), Quaternion.identity);
+            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(-20, 20), 3, i), Quaternion.identity);
         }
     }
 
@@ -21,6 +21,6 @@ public class enemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

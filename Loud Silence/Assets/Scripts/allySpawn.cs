@@ -10,9 +10,9 @@ public class allySpawn : MonoBehaviour
     void Start()
     {
 
-        for (int i = -5; i < 20; i++)
+        for (int i = 0; i < 20; i++)
         {
-            Instantiate(ally, new Vector3(UnityEngine.Random.Range(-40, 10), 3, i), Quaternion.identity);
+            Instantiate(ally, new Vector3(UnityEngine.Random.Range(-30, 30), 3, i), Quaternion.identity);
         }
     }
 
