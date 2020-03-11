@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1127,6 +1127,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1213,6 +1214,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSensitivity: 200
   playerBody: {fileID: 1527221894}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c335039a5c9579f49b54a28918ac5c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage: 1
+  range: 100
+  fpCam: {fileID: 0}
 --- !u!4 &1133303672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d0f4f4a6ea280eb49a9e01e9ab72fa18,
@@ -1696,6 +1713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527221894}
   - component: {fileID: 1527221893}
+  - component: {fileID: 1527221895}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1738,6 +1756,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527221895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527221892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c335039a5c9579f49b54a28918ac5c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage: 1
+  range: 100
+  fpCam: {fileID: 963194227}
 --- !u!1001 &1555456527
 PrefabInstance:
   m_ObjectHideFlags: 0

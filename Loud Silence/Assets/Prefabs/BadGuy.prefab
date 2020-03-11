@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4634608214288376377}
   - component: {fileID: 5009434918027988888}
   - component: {fileID: -2098382114690361036}
+  - component: {fileID: 213607147115350816}
   m_Layer: 0
   m_Name: BadGuy
-  m_TagString: Untagged
+  m_TagString: BadGuy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +109,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {x: 19.3, y: 1.13, z: 0}
+--- !u!114 &213607147115350816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5725265889702674944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b58ab4d23703ab4085a23d0c0793b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &6065367527328404851
 GameObject:
   m_ObjectHideFlags: 0
