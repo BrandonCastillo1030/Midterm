@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4299924700126216268}
   - component: {fileID: 4634608214288376377}
   - component: {fileID: 5009434918027988888}
-  - component: {fileID: 367514294431028029}
+  - component: {fileID: -2098382114690361036}
   m_Layer: 0
   m_Name: BadGuy
   m_TagString: Untagged
@@ -95,7 +95,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &367514294431028029
+--- !u!114 &-2098382114690361036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +104,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5725265889702674944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22617da5537fd17489af4cad80e4737f, type: 3}
+  m_Script: {fileID: 11500000, guid: e222a3f8181bd5b46a389309336498bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {x: 19.3, y: 1.13, z: 0}
 --- !u!1 &6065367527328404851
 GameObject:
   m_ObjectHideFlags: 0

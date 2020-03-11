@@ -12,7 +12,7 @@ public class allySpawn : MonoBehaviour
 
         for (int i = 0; i < 20; i++)
         {
-            Instantiate(ally, new Vector3(UnityEngine.Random.Range(-30, 30), 3, i), Quaternion.identity);
+            Instantiate(ally, new Vector3(UnityEngine.Random.Range(-5, 14), 1, i), Quaternion.identity);
         }
     }
 

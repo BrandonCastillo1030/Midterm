@@ -6,7 +6,7 @@ public class rotationEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Vector3 target = new Vector3(19.3f, 1.13f, 0.0f);
+    public Vector3 target = new Vector3(19.3f, 1.13f, 0.0f);
 
     void Start()
     {
