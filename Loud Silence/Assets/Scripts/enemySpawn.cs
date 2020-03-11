@@ -12,7 +12,7 @@ public class enemySpawn : MonoBehaviour
 
         for (int i = 0; i < 50; i++)
         {
-            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(-5, 14), 1, i), Quaternion.identity);
+            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(5, 16), 1, i), Quaternion.identity);
         }
     }
 

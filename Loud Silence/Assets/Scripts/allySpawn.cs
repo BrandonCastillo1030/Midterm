@@ -5,14 +5,25 @@ using UnityEngine;
 
 public class allySpawn : MonoBehaviour
 {
+    public int z;
+    public int maximumZ =5;
     // Start is called before the first frame update
     public GameObject ally;
     void Start()
     {
 
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 20; i+=1)
         {
-            Instantiate(ally, new Vector3(UnityEngine.Random.Range(-5, 14), 1, i), Quaternion.identity);
+            if (i < 20)
+            {
+                z = z + 1;
+            }
+            if (z > 10)
+            {
+                z = maximumZ;
+            }
+
+            Instantiate(ally, new Vector3(UnityEngine.Random.Range(5, 16), 1, z), Quaternion.identity);
         }
     }
 
