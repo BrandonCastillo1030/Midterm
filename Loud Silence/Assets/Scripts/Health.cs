@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     public float range = 100f;
 
     public Camera fpCam;
-
+    public ParticleSystem muzzleFlash;
 
     void Update()
     {
@@ -41,6 +41,8 @@ public class Health : MonoBehaviour
     
     void Detect()
     {
+        muzzleFlash.Play();
+
         RaycastHit hit;
         if (Physics.Raycast(fpCam.transform.position, fpCam.transform.forward, out hit, range))
         {
