@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 //public var text1 = Texture;
@@ -16,9 +18,11 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float health = 100.0f;
+    public Text mytext = null;
 
-    private float maxHealth = 200.0f;
+    public float health = 5.0f;
+
+    private float maxHealth = 10.0f;
 
     public float damage = 1f;
     public float range = 100f;
@@ -28,6 +32,12 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        mytext.text = health.ToString("F1");
+
+        if (health == 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        Debug.Log(health);
         if (Input.GetMouseButtonDown(0))
         {
             Detect();
@@ -46,7 +56,7 @@ public class Health : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpCam.transform.position, fpCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
