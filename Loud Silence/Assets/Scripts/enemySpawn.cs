@@ -10,9 +10,9 @@ public class enemySpawn : MonoBehaviour
     void Start()
     {
 
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 50; i+=2)
         {
-            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(5, 16), 1, i), Quaternion.identity);
+            Instantiate(enemy, new Vector3(UnityEngine.Random.Range(-20, 16), 1, i), Quaternion.identity);
         }
     }
 

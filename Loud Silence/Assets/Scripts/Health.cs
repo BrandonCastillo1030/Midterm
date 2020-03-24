@@ -18,6 +18,8 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    public float Score = 0;
+
     public Text mytext = null;
 
     public float health = 5.0f;
@@ -32,7 +34,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        mytext.text = health.ToString("F1");
+      mytext.text = health.ToString("F1");
 
         if (health == 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -42,13 +44,19 @@ public class Health : MonoBehaviour
         {
             Detect();
         }
-       
+
         if(health > maxHealth)
         {
             health = maxHealth;
         }
     }
-    
+
+    void OnCollisiionEnter(Collision _collision)
+    {
+      if(_collision.gameObject.tag=="BadGuy")
+      {health = health - 1;}
+    }
+
     void Detect()
     {
         muzzleFlash.Play();
@@ -63,17 +71,19 @@ public class Health : MonoBehaviour
             {
                 target.TakeDamage(damage);
 
-                health = health + 1;
+                health = health - 1;
             }
             TargetR targetR = hit.transform.GetComponent<TargetR>();
             if (targetR != null)
             {
                 targetR.TakeDamage(damage);
 
-                health = health - 1;
+                Score = Score + 1;
+
+                print("SCORE"+Score);
             }
         }
-        
+
     }
 
 }

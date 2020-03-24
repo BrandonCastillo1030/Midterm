@@ -5,33 +5,24 @@ using UnityEngine;
 
 public class allySpawn : MonoBehaviour
 {
-    public int z;
-    public int maximumZ =5;
-    // Start is called before the first frame update
-    public GameObject ally;
-    void Start()
-    {
+       public int numObjects = 10;
+       public GameObject prefab;
 
-        for (int i = 0; i < 20; i+=1)
-        {
-            if (i < 20)
-            {
-                z = z + 1;
-            }
-            if (z > 10)
-            {
-                z = maximumZ;
-            }
+       void Start() {
+           Vector3 center = transform.position;
+           for (int i = 0; i < numObjects; i++){
+               Vector3 pos = RandomCircle(center, 5.0f);
+               Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center);
+               Instantiate(prefab, pos, rot);
+           }
+       }
 
-            Instantiate(ally, new Vector3(UnityEngine.Random.Range(5, 16), 1, z), Quaternion.identity);
-        }
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-}
+       Vector3 RandomCircle ( Vector3 center ,   float radius  ){
+           float ang = UnityEngine.Random.value * 360;
+           Vector3 pos;
+           pos.y = 1 + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
+           pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
+           pos.z = 0;
+           return pos;
+       }
+   }
