@@ -21,10 +21,11 @@ public class Health : MonoBehaviour
     public float Score = 0;
 
     public Text mytext = null;
+    public Text mytext_sc = null;
 
     public float health = 5.0f;
 
-    private float maxHealth = 10.0f;
+    /*private float maxHealth = 10.0f;*/
 
     public float damage = 1f;
     public float range = 100f;
@@ -35,9 +36,14 @@ public class Health : MonoBehaviour
     void Update()
     {
       mytext.text = health.ToString("F1");
+      mytext_sc.text = Score.ToString("F1");
 
-        if (health == 0) {
+        if (health == 0 ) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (Score == 15.0f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         }
         Debug.Log(health);
         if (Input.GetMouseButtonDown(0))
@@ -45,16 +51,18 @@ public class Health : MonoBehaviour
             Detect();
         }
 
-        if(health > maxHealth)
+        /*if(health > maxHealth)
         {
             health = maxHealth;
-        }
+        }*/
     }
 
-    void OnCollisiionEnter(Collision _collision)
+    void OnTriggerEnter(Collider other)
     {
-      if(_collision.gameObject.tag=="BadGuy")
-      {health = health - 1;}
+        if (other.gameObject.tag == "BadGuy")
+        {
+            health -= 1;
+        }
     }
 
     void Detect()

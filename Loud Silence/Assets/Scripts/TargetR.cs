@@ -6,9 +6,9 @@ public class TargetR : MonoBehaviour
 {
     public float health = 1f;
 
-    void OnCollisiionEnter(Collision _collision)
+    void OnTriggerEnter(Collider other)
     {
-      if(_collision.gameObject.tag=="Player")
+      if(other.gameObject.tag=="Player")
       {
         health -= 1f;
         if (health <= 0f)
