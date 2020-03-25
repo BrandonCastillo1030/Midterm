@@ -2945,6 +2945,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1961065442291351052, guid: 509f4aedbc2ac4a6d83629732a13a3d2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1961065442291351054, guid: 509f4aedbc2ac4a6d83629732a13a3d2,
         type: 3}
       propertyPath: m_TagString
@@ -3035,10 +3040,16 @@ PrefabInstance:
       propertyPath: mytext
       value: 
       objectReference: {fileID: 850970065}
+    - target: {fileID: 1961065443126194792, guid: 509f4aedbc2ac4a6d83629732a13a3d2,
+        type: 3}
+      propertyPath: mytext_sc
+      value: 
+      objectReference: {fileID: 332909030}
     - target: {fileID: 1961065443126194793, guid: 509f4aedbc2ac4a6d83629732a13a3d2,
         type: 3}
       propertyPath: mytext
       value: 
       objectReference: {fileID: 850970065}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1961065443126194793, guid: 509f4aedbc2ac4a6d83629732a13a3d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 509f4aedbc2ac4a6d83629732a13a3d2, type: 3}
